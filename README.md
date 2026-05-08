@@ -18,7 +18,6 @@ AlgoChef is a machine learning and NLP-based web application that recommends rec
 * Model Serialization
 * Full-stack Web Integration
 
-
 --------------------
 
 ## 💻 Tech Stack
@@ -55,46 +54,46 @@ NLP is used because ingredients are textual data.
 The system cannot directly understand text, so NLP converts ingredient text into machine-readable vectors.
 
 * This is done using -
-  TF-IDF Vectorization
+  -TF-IDF Vectorization
 
 * Core Algorithm Used -
-  K-Nearest Neighbors (KNN) 
+ - K-Nearest Neighbors (KNN) 
 
 Step 1: Dataset Loading
-  recipe_df = pd.read_csv("recipe_final1.csv")
+ - recipe_df = pd.read_csv("recipe_final1.csv")
 
 Step 2: Ingredient Text Processing
-  vectorizer = TfidfVectorizer()
-  X_ingredients = vectorizer.fit_transform(recipe_df["ingredients_list"])
+ - vectorizer = TfidfVectorizer()
+ - X_ingredients = vectorizer.fit_transform(recipe_df["ingredients_list"])
 
 Step 3: Numerical Feature Scaling
-  scaler = StandardScaler()
+ - scaler = StandardScaler()
 
 Step 4: Sparse Matrix Conversion
-  X_numerical_sparse = csr_matrix(X_numerical)
+ - X_numerical_sparse = csr_matrix(X_numerical)
 
 Step 5: Combining Features
-  X_combined = hstack([X_ingredients, X_numerical_sparse])
+  -X_combined = hstack([X_ingredients, X_numerical_sparse])
 
 * Euclidean Distance
-  KNN calculates similarity using Euclidean Distance.
+ - KNN calculates similarity using Euclidean Distance.
 
 * Smaller distance means:
   -Recipes are more similar
-  Larger distance means:
+* Larger distance means:
   -Recipes are different
 
 * Model Training :
-  knn = NearestNeighbors(n_neighbors=3, metric="euclidean")
-  knn.fit(X_combined)
+ - knn = NearestNeighbors(n_neighbors=3, metric="euclidean")
+ - knn.fit(X_combined)
 
 * Model Saving :
-  pickle.dump(knn, open("recipe_model.pkl", "wb"))
+ - pickle.dump(knn, open("recipe_model.pkl", "wb"))
 
 * Saved files :
-  recipe_model.pkl	Trained KNN model
-  vectorizer.pkl	TF-IDF vocabulary
-  scaler.pkl	Feature scaling values
+ - recipe_model.pkl	Trained KNN model
+ - vectorizer.pkl	TF-IDF vocabulary
+ - scaler.pkl	Feature scaling values
 
 
 --------------------
@@ -110,25 +109,25 @@ When user enters ingredients:
 
 Project Architecture :
 
-User Input
-     ↓
-Frontend Interface
-     ↓
-Flask Backend
-     ↓
-Input Preprocessing
-     ↓
-TF-IDF Vectorization
-     ↓
-Feature Scaling
-     ↓
-Feature Combination
-     ↓
-KNN Similarity Search
-     ↓
-Recipe Recommendations
-     ↓
-Display Results
+- User Input
+-     ↓
+- Frontend Interface
+-     ↓
+- Flask Backend
+-     ↓
+- Input Preprocessing
+-     ↓
+- TF-IDF Vectorization
+-     ↓
+- Feature Scaling
+-     ↓
+- Feature Combination
+-     ↓
+- KNN Similarity Search
+-     ↓
+- Recipe Recommendations
+-     ↓
+- Display Results
 
 
 
