@@ -43,7 +43,7 @@ AlgoChef is a machine learning and NLP-based web application that recommends rec
 
 --------------------
 
-##Artificial Intelligence Concepts Used :
+## Artificial Intelligence Concepts Used :
 1. Machine Learning (ML)
 * The system learns relationships between ingredients and nutrition values
 * Recipes are converted into numerical vectors
@@ -99,7 +99,7 @@ Step 5: Combining Features
 
 --------------------
 
-##Recommendation Process :
+## Recommendation Process :
 When user enters ingredients:
 1. Input ingredients converted into TF-IDF vector
 2. Nutritional values scaled
@@ -134,7 +134,7 @@ Display Results
 
 --------------------
 
-##Project Files Description :
+## Project Files Description :
 * app.py	Main Flask application
 * recipe_model.py	Model training script
 * recipe_model.pkl	Trained KNN model
@@ -147,7 +147,7 @@ Display Results
 
 --------------------
 
-##Future Improvements :
+## Future Improvements :
 * Deep Learning-based recommendations
 * User login and personalization
 * Collaborative filtering
@@ -158,7 +158,7 @@ Display Results
 
 --------------------
 
-##To Run :
+## To Run :
 1. cd Recipe_Recommendation_System
 2. Install Required Libraries
    pip install -r requirements.txt
