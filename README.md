@@ -27,7 +27,7 @@ AlgoChef is a machine learning and NLP-based web application that recommends rec
 * JavaScript
 * Bootstrap
 * React (Shopzy Integration)
-* 
+  
 ### Backend
 * Flask
 * Python
